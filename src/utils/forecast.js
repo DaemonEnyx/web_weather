@@ -9,7 +9,7 @@ const forecast = (latitude,longitude, callback) => {
             //callback(response.body.error,undefined)
             console.log(response.body.error,undefined)
         }else{
-            callback(undefined, (body.daily.data[0].summary+'The temperature is '+body.currently.temperature+'° and the precipProbability is '+body.currently.precipProbability))
+            callback(undefined, (body.daily.data[0].summary+'The temperature is '+body.currently.temperature+'°, the precipProbability is '+body.currently.precipProbability+', and the pressure is '+body.currently.pressure+'. Timezone: '+body.timezone))
         }
     })
 
